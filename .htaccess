@@ -42,21 +42,21 @@
 	#------------- Redirect from the `http://` to the `https://` version of the URL.
 	#------------- https://wiki.apache.org/httpd/RewriteHTTPToHTTPS
 
-    RewriteCond %{HTTPS} !=on
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
-
+	RewriteCond %{HTTPS} !=on
+	RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+	
 	#------------- rewrite www.example.com → example.com
-    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-    RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
-
+	RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+	RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [R=301,L]
+	
 	#------------- Block access to all hidden files and directories with the exception of
 	#------------- the visible content from within the `/.well-known/` hidden directory.
-
-    RewriteEngine On
-    RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
-    RewriteCond %{SCRIPT_FILENAME} -d [OR]
-    RewriteCond %{SCRIPT_FILENAME} -f
-    RewriteRule "(^|/)\." - [F]
+	
+	RewriteEngine On
+	RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
+	RewriteCond %{SCRIPT_FILENAME} -d [OR]
+	RewriteCond %{SCRIPT_FILENAME} -f
+	RewriteRule "(^|/)\." - [F]
 </IfModule>
 
 
