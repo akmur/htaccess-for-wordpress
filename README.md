@@ -1,6 +1,6 @@
 # Htaccess for Wordpress
 
-These settings have been borrowed mainly from HTML5 Boilerplate and from other sources from the interwebz
+These settings have been borrowed mainly from HTML5 Boilerplate and from other sources from the interweb
 
 Sources:
 * [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
