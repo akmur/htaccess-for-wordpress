@@ -22,6 +22,93 @@
 	satisfy all
 </Files>
 
+# Disable xmlrpc.php access except for Automattic
+# https://wordpress.org/support/topic/htaccess-configure-to-allow-jetpack-only
+
+<Files xmlrpc.php>
+	Order Deny,Allow
+	Deny from all
+	Allow from 76.74.254.*
+	Allow from 216.151.209.*
+	Allow from 69.174.248.*
+	Allow from 66.135.48.*
+	Allow from 76.74.255.*
+	Allow from 216.151.209.*
+	Allow from 216.151.210.*
+	Allow from 76.74.248.*
+	Allow from 207.198.*
+	Allow from 207.198.101.*
+	Allow from 198.181.*
+	Allow from 207.198.101.*
+	Allow from 192.0.64.*
+	Allow from 192.0.65.*
+	Allow from 192.0.66.*
+	Allow from 192.0.67.*
+	Allow from 192.0.68.*
+	Allow from 192.0.69.*
+	Allow from 192.0.70.*
+	Allow from 192.0.71.*
+	Allow from 192.0.72.*
+	Allow from 192.0.73.*
+	Allow from 192.0.74.*
+	Allow from 192.0.75.*
+	Allow from 192.0.76.*
+	Allow from 192.0.77.*
+	Allow from 192.0.78.*
+	Allow from 192.0.79.*
+	Allow from 192.0.80.*
+	Allow from 192.0.81.*
+	Allow from 192.0.82.*
+	Allow from 192.0.83.*
+	Allow from 192.0.84.*
+	Allow from 192.0.85.*
+	Allow from 192.0.86.*
+	Allow from 192.0.87.*
+	Allow from 192.0.88.*
+	Allow from 192.0.89.*
+	Allow from 192.0.90.*
+	Allow from 192.0.91.*
+	Allow from 192.0.92.*
+	Allow from 192.0.93.*
+	Allow from 192.0.94.*
+	Allow from 192.0.95.*
+	Allow from 192.0.96.*
+	Allow from 192.0.97.*
+	Allow from 192.0.98.*
+	Allow from 192.0.99.*
+	Allow from 192.0.100.*
+	Allow from 192.0.101.*
+	Allow from 192.0.102.*
+	Allow from 192.0.103.*
+	Allow from 192.0.104.*
+	Allow from 192.0.105.*
+	Allow from 192.0.106.*
+	Allow from 192.0.107.*
+	Allow from 192.0.108.*
+	Allow from 192.0.109.*
+	Allow from 192.0.110.*
+	Allow from 192.0.111.*
+	Allow from 192.0.112.*
+	Allow from 192.0.113.*
+	Allow from 192.0.114.*
+	Allow from 192.0.115.*
+	Allow from 192.0.116.*
+	Allow from 192.0.117.*
+	Allow from 192.0.118.*
+	Allow from 192.0.119.*
+	Allow from 192.0.120.*
+	Allow from 192.0.121.*
+	Allow from 192.0.122.*
+	Allow from 192.0.123.*
+	Allow from 192.0.124.*
+	Allow from 192.0.125.*
+	Allow from 192.0.126.*
+	Allow from 192.0.127.*
+	Satisfy All
+	ErrorDocument 403 http://127.0.0.1/
+</Files>
+
+
 
 <IfModule mod_rewrite.c>
 	RewriteEngine On
